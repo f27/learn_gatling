@@ -1,4 +1,7 @@
-HELP.md
+target
+.settings
+.classpath
+.project
 .gradle
 build/**
 !gradle/wrapper/gradle-wrapper.jar
@@ -9,10 +12,7 @@ build/**
 
 ### STS ###
 .apt_generated
-.classpath
 .factorypath
-.project
-.settings
 .springBeans
 .sts4-cache
 bin/

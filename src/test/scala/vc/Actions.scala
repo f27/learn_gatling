@@ -24,4 +24,20 @@ object Actions {
     .check(css(".sidebar-item__text").exists)
     .check(css(".sidebar-item__text").is("Популярное"))
     .check(regex("Популярное").exists)
+
+  val search: HttpRequestBuilder = http("GET_/discovery - #{searchQuery}")
+    .get("/discovery")
+    .queryParam("q", "#{searchQuery}")
+
+  val login: HttpRequestBuilder = http("login")
+    .post("https://api.vc.ru/v3.4/auth/email/login")
+    .formParam("email", "#{email}")
+    .formParam("password", "#{password}")
+    .check(jsonPath("$.message").is("logined"))
+    .check(jsonPath("$.data.accessToken").saveAs("accessToken"))
+
+  val me: HttpRequestBuilder = http("me")
+    .get("https://api.vc.ru/v2.1/subsite/me")
+    .header("JWTAuthorization", "Bearer #{accessToken}")
+    .check(jsonPath("$.result.id").exists)
 }

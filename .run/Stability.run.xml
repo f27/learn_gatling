@@ -1,11 +1,11 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Gatling 1st lesson" type="SbtRunConfiguration" factoryName="sbt Task" show_console_on_std_err="false" show_console_on_std_out="false">
+  <configuration default="false" name="Stability" type="SbtRunConfiguration" factoryName="sbt Task" show_console_on_std_err="false" show_console_on_std_out="false">
     <option name="allowRunningInParallel" value="false" />
     <option name="projectPathOnTarget" />
     <option name="selectedOptions">
       <list />
     </option>
-    <option name="tasks" value="&quot;Gatling / testOnly *.ComputerDatabaseSimulation&quot;" />
+    <option name="tasks" value="&quot;Gatling / testOnly webtours.simulations.Stability&quot;" />
     <option name="useSbtShell" value="false" />
     <option name="vmparams" value="-Xms512M -Xmx1024M -Xss1M" />
     <option name="workingDir" value="$PROJECT_DIR$" />
